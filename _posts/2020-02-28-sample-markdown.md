@@ -1,9 +1,8 @@
----
+
 layout: post
 title: Digimon Lab Blog Post
 subtitle: My process in solving the three questions
 author: Arda Altintepe
----
 
 
 ## Read CSV
