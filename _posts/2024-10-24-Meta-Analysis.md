@@ -35,7 +35,7 @@ The authors were interested in this data because it allowed them to compare the 
 
 Here is an image about the Associated Data section, which is essentially blank other than the supplemental images and tables that were featured in the article:
 
-![Data Availability Image](/assets/img/Screenshot-2024-10-24-at-9.49.50 PM.png)
+![Data Availability Image](/assets/img/screenshot.png)
 
 - **Significant Findings**: The **Mann-Whitney U tests** that the authors of the study used showed that **10 ECG features** had a **p-value** of less than **0.05**, showing significant statistical differences between HOCM and HNCM patients. This contradicts the findings of the previous paper that supported the null hypothesis, which I find very interesting. 
 - From what is given in the paper, study provided substantial evidence to **disprove the null hypothesis**, showing that ECG data can indeed differentiate between **HOCM** and **HNCM** through a machine-learning model.
