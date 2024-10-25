@@ -3,7 +3,7 @@ layout: post
 title: "Meta-Analysis"
 subtitle: "My meta-analysis on an article classifying obstructive and non-obstructive hypertrophic cardiomyopahy"
 author: "Arda Altintepe"
-cover-img: 
+cover-img: /assets/img/screenshot1.png
 ---
 
 Over the summer I did research in machine learning to classify two types of cardiomyopathy, dilated and hypertrophic, using electrocardiogram data and machine-learning. Hypertrophic cardiomyopathy also has two forms, when it is obstructive and when it is not, and I found this article which attempted to classify these forms using electrocardiogram data and machine learning-similar to my research over the summer. 
