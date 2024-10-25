@@ -34,7 +34,8 @@ The authors were interested in this data because it allowed them to compare the 
 - **External Validation**: The model was tested on a separate validation set from the same hospital, resulting in a **C-statistic of 0.776**, which indicates a strong predictive ability. Them using an external validation set adds a lot of credibility to their paper, since an external validation set is essentially just a dataset of new patients admitted to the hospital, where they can get an accurate sense of the strength of their model in differentiating the two conditions. The paper would be a lot less credible if they didn't add this part about an external validation set. They also provide the full equation for their logistic regression model, with the constant and the coefficient weights, which was helpful. However, from what I could find, neither their code or data is available to the public. Again, this makes it impossible to reproduce.
 
 Here is an image about the Associated Data section, which is essentially blank other than the supplemental images and tables that were featured in the article:
-![Data Availability Image](./Screenshot\ 2024-10-24\ at\ 9.49.50\ PM.png)
+![Data Availability Image](./Screenshot_2024-10-24_at_9.49.50_PM.png)
+
   
 - **Significant Findings**: The **Mann-Whitney U tests** that the authors of the study used showed that **10 ECG features** had a **p-value** of less than **0.05**, showing significant statistical differences between HOCM and HNCM patients. This contradicts the findings of the previous paper that supported the null hypothesis, which I find very interesting. 
 - From what is given in the paper, study provided substantial evidence to **disprove the null hypothesis**, showing that ECG data can indeed differentiate between **HOCM** and **HNCM** through a machine-learning model.
