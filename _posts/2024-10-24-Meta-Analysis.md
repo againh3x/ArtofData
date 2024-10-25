@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Meta-Analysis"
-subtitle: "My meta-analysis on an article classifying obstructive and non-obstructive hypertrophic cardiomyopahy"
+subtitle: "My meta-analysis on an article classifying obstructive and non-obstructive hypertrophic cardiomyopathy"
 author: "Arda Altintepe"
 cover-img: /assets/img/screenshot1.png
 ---
