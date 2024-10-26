@@ -6,7 +6,7 @@ author: "Arda Altintepe"
 cover-img: /assets/img/screenshot1.png
 ---
 
-Over the summer I did research in machine learning to classify two types of cardiomyopathy, dilated and hypertrophic, using electrocardiogram data and machine-learning. Hypertrophic cardiomyopathy also has two forms, when it is obstructive and when it is not, and I found [this article](https://pmc.ncbi.nlm.nih.gov/articles/PMC10402817/#sec20) which attempted to classify these forms using electrocardiogram data and machine learning-similar to my research over the summer. 
+Over the summer I did research in machine learning to classify two types of cardiomyopathy, dilated and hypertrophic, using electrocardiogram data and machine-learning. Hypertrophic cardiomyopathy also has two forms, when it is obstructive and when it is not, and I found [this article](https://pmc.ncbi.nlm.nih.gov/articles/PMC10402817/#sec20) which attempted to classify these forms using electrocardiogram data and machine learning. I didn't focus on the same alternative hypothesis as the article over the summer, but there were some similarities in methods that I found interesting.
 
 Here is some important background information on the topic: 
 
