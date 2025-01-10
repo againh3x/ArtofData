@@ -16,6 +16,23 @@ player_averages = df.groupby('normalized_name').agg({
     'FT.': 'mean',
     'TOV.': 'mean'
 }).reset_index()
+Interestingly enough, the data type for the draft_number column was still an object, so I used this pandas command to make them numeric: 
+player_averages['draft_number'] = pd.to_numeric(player_averages['draft_number'], errors='coerce')
 
 After ending up with my new dataframe called player_averages, I used pandas' describe() function to summarize the data and give important information like IQR, std, mean, min/max, etc. 
 Something that really stood out to me was that both the mean and median (50%) of pts, assists, and rebounds were very low. In fact, the median career average for points per game was only 4.65 ppg, which seems way lower than expected when you see NBA superstars having consistent 40-point games all the time. Because of this, you might expect the mean to be a significant amount higher, but the mean ppg was still only 5.9ppg even with the 40+ points from the best players. Even more shocking was the assists per game, with barely over one assist being the mean. In addition, a mean free throw percentage of only 0.64 felt extremely low from the NBA. I wonder how different the numbers would look if I took a player's best seasons instead of their career averages. 
+
+Next, in order to compare variables and analyze correlations, I created a correlation matrix with all variables. I then unstacked that correlation matrix, filtered out duplicate pairs of variables, created another column with the absolute values of the correlation coefficient, and then used that column to sort the pairs in terms of highest correlation. I then displayed the new correlation data. 
+
+
+
+
+
+
+
+
+
+
+
+
+
