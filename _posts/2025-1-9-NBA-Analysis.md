@@ -20,9 +20,35 @@ Interestingly enough, the data type for the draft_number column was still an obj
 player_averages['draft_number'] = pd.to_numeric(player_averages['draft_number'], errors='coerce')
 
 After ending up with my new dataframe called player_averages, I used pandas' describe() function to summarize the data and give important information like IQR, std, mean, min/max, etc. 
-Something that really stood out to me was that both the mean and median (50%) of pts, assists, and rebounds were very low. In fact, the median career average for points per game was only 4.65 ppg, which seems way lower than expected when you see NBA superstars having consistent 40-point games all the time. Because of this, you might expect the mean to be a significant amount higher, but the mean ppg was still only 5.9ppg even with the 40+ points from the best players. Even more shocking was the assists per game, with barely over one assist being the mean. In addition, a mean free throw percentage of only 0.64 felt extremely low from the NBA. I wonder how different the numbers would look if I took a player's best seasons instead of their career averages. 
+Something that really stood out to me was that both the mean and median (50%) of pts, assists, and rebounds were very low. In fact, the median career average for points per game was only 4.65 ppg, which seems way lower than expected when you see NBA superstars having consistent 40-point games all the time. Because of this, you might expect the mean to be a significant amount higher, but the mean ppg was still only 5.9ppg even with the 40+ points from the best players. One thing I found "fishy" was that one singular player had a career average of 100% of his team's total turnovers. It may be that he only played one game and had all the turnovers, but this is interesting. Even more shocking was the career average assists per game, with barely over one assist being the mean. In addition, a mean free throw percentage of only 0.64 felt extremely low from the NBA. I wonder how different the numbers would look if I took a player's best seasons instead of their career averages. 
 
 Next, in order to compare variables and analyze correlations, I created a correlation matrix with all variables. I then unstacked that correlation matrix, filtered out duplicate pairs of variables, created another column with the absolute values of the correlation coefficient, and then used that column to sort the pairs in terms of highest correlation. I then displayed the new correlation data. 
+
+
+correlation_matrix = player_averages[['player_height', 'player_weight', 'pts', 'reb', 'ast', 'FT.', 'TOV.', 'draft_number']].corr()
+
+print("Correlation Matrix:")
+display(correlation_matrix)
+
+#unstack and turn into a longer format
+correlation_pairs = correlation_matrix.unstack().reset_index()
+
+#rename some columns
+correlation_pairs.columns = ['Variable 1', 'Variable 2', 'Correlation']
+
+#remove duplicates
+correlation_pairs = correlation_pairs[correlation_pairs['Variable 1'] < correlation_pairs['Variable 2']]
+
+#make absolute value column to make sorting easier and see "strength" of the correlations
+correlation_pairs['Abs Correlation'] = correlation_pairs['Correlation'].abs()
+
+#sort
+correlation_pairs = correlation_pairs.sort_values(by='Abs Correlation', ascending=False)
+
+print("Strongest Correlations:")
+display(correlation_pairs) 
+
+
 
 
 
