@@ -46,9 +46,9 @@ Because of this, you might expect the mean to be a significant amount higher, bu
 
 Even more shocking was the career average assists per game, with barely over one assist being the mean. In addition, a mean free throw percentage of only 0.64 felt extremely low from the NBA. I wonder how different the numbers would look if I took a player's best seasons instead of their career averages.
 
-When analyzing the box plots of each variable, I was surprised to  see that a select few players (<20), had a draft number greater than 61 (undrafted), which should not be possible. The box plot of draft number is featured below, where you can see the outer quartile is not on 61 as it should. 
+When analyzing the box plots of each variable, I was surprised to  see that a select few players (<20), had a draft number greater than 61 (undrafted), which should not be possible. The box plot of draft number is featured below, where you can see the outer quartile is not on 61 as it should be: 
 
-
+![Draft Number Box Plot]({{ '/assets/img/Screenshot 2025-01-14 at 8.23.36 AM.png' | relative_url }})
 
 After making a new dataframe to view all players with draft numbers >61, I found that the player with the highest draft number was "Charles Jones" with 165 draft number which makes no sense. I looked him up on google, and it confirmed his draft number was #165 in the 1979 NBA Draft. After some digging, I found that before 1989, NBA drafts could have up to 7 rounds, which means a whopping 210 maximum draft number. In 1984, there was a whopping 300 picks. Therefore, I didn't remove Charles Jones or any other player from the dataset, because this was their true draft number. Also, the reason so few players had this draft number was because the dataset only goes back to 1996, where not a lot of players would have been drafted in a late round before 1989. 
 
