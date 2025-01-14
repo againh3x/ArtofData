@@ -87,7 +87,7 @@ display(correlation_pairs)
 ![Draft Number vs. Assists Regression Plot]({{ '/assets/img/Screenshot 2025-01-14 at 8.09.07 AM.png' | relative_url }})
 ![Draft Number vs. Points Regression Plot]({{ '/assets/img/Screenshot 2025-01-14 at 8.09.20 AM.png' | relative_url }})
 ![Draft Number vs. Rebounds Regression Plot]({{ '/assets/img/Screenshot 2025-01-14 at 8.09.39 AM.png' | relative_url }})
-![Player Weight vs. Assists Plot]({{ '/assets/img/Screenshot 2025-01-14 at 8.23.36 AM.png' | relative_url }})
+![Player Weight vs. Assists Plot]({{ '/assets/img/Screenshot 2025-01-14 at 8.09.56 AM.png' | relative_url }})
 ![Free Throw % vs. Assists]({{ '/assets/img/Screenshot 2025-01-14 at 8.10.12 AM.png' | relative_url }})
 
 ### Interpretation
