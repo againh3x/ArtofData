@@ -82,7 +82,15 @@ print("Strongest Correlations:")
 display(correlation_pairs)
 ```
 
-### Findings
+![Points vs. Assists Regression Plot]({{ '/assets/img/Screenshot 2025-01-14 at 8.08.28 AM.png' | relative_url }})
+![Points vs. Rebounds Regression Plot]({{ '/assets/img/Screenshot 2025-01-14 at 8.08.56 AM.png' | relative_url }})
+![Draft Number vs. Assists Regression Plot]({{ '/assets/img/Screenshot 2025-01-14 at 8.09.07 AM.png' | relative_url }})
+![Draft Number vs. Points Regression Plot]({{ '/assets/img/Screenshot 2025-01-14 at 8.09.20 AM.png' | relative_url }})
+![Draft Number vs. Rebounds Regression Plot]({{ '/assets/img/Screenshot 2025-01-14 at 8.09.39 AM.png' | relative_url }})
+![Player Weight vs. Assists Plot]({{ '/assets/img/Screenshot 2025-01-14 at 8.23.36 AM.png' | relative_url }})
+![Free Throw % vs. Assists]({{ '/assets/img/Screenshot 2025-01-14 at 8.10.12 AM.png' | relative_url }})
+
+### Interpretation
 
 Out of all the correlation pairs, player_height and player_weight had the highest correlation of 0.81. This is to be expected, as the taller a player is, the more mass he will have and the heavier he will be. There were also strong positive correlations between points and assists, as well as points and rebounds. This makes sense, as the more points a player scores, the better he is, meaning he will probably play longer in the game and rack up more rebounds and assists. Also, he will just be more skilled and be able to get rebounds and assists easier.
 
