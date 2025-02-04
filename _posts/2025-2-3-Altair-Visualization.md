@@ -44,7 +44,7 @@ Overall, I would say this is a success, and I am happy with my work. I couldn't 
   <!-- Import vega-embed -->
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
-<body>
+
 
 <div id="vis"></div>
 
@@ -54,7 +54,7 @@ Overall, I would say this is a success, and I am happy with my work. I couldn't 
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
-</body>
+
 ---
 
 ## Code for the Election Visualization
