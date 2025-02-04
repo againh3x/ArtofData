@@ -47,9 +47,9 @@ Overall, I would say this is a success, and I am happy with my work. I couldn't 
 <body>
 
 <div id="vis"></div>
-us_election_map.json
+
 <script type="text/javascript">
-  var spec = "https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json";
+  var spec = "us_election_map.json";
   vegaEmbed('#vis', spec).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
