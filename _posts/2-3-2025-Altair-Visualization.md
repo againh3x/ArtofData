@@ -8,6 +8,7 @@ I really like this graph because it's not one of the conventional graphs you see
 
 Some channels are color for the party as well as opacity for the margins.
 
+![NYT Election Map]({{ '/assets/img/Screenshot 2025-02-03 at 11.38.49 PM.png' | relative_url }})
 ---
 
 ## LA Wildfires Map
