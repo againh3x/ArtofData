@@ -35,6 +35,26 @@ I also tried making the margin associated with both color and opacity, where I w
 
 Overall, I would say this is a success, and I am happy with my work. I couldn't find much for the LA wildfires map, and it was hard to find a dataset of the topological area shown in the NYT graph. I think my election map should hopefully be satisfactory because it covers a lot of the same data visualization and Altair skills of working with geoshapes.
 
+
+
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@[5]"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@[5]"></script>
+  <!-- Import vega-embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@[6]"></script>
+</head>
+<body>
+
+<div id="vis"></div>
+us_election_map.json
+<script type="text/javascript">
+  var spec = "https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json";
+  vegaEmbed('#vis', spec).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+</body>
 ---
 
 ## Code for the Election Visualization
