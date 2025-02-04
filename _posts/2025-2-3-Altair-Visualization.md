@@ -49,7 +49,7 @@ Overall, I would say this is a success, and I am happy with my work. I couldn't 
 <div id="vis"></div>
 
 <script type="text/javascript">
-  var spec = "us_election_map.json";
+  var spec = "https://raw.githubusercontent.com/againh3x/ArtofData/refs/heads/master/us_election_map.json";
   vegaEmbed('#vis', spec).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
