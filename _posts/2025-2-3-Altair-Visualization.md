@@ -47,10 +47,10 @@ import pandas as pd
 import random
 from vega_datasets import data
 
-# US states data from Vega with real life border and names
+#us states data from vega with real life border and names
 states = alt.topo_feature(data.us_10m.url, 'states')
 
-# List of state IDs and their names I found online
+#list of state id and their names i found online
 state_ids = [
     {"id": 1, "name": "Alabama"}, {"id": 2, "name": "Alaska"}, {"id": 4, "name": "Arizona"},
     {"id": 5, "name": "Arkansas"}, {"id": 6, "name": "California"}, {"id": 8, "name": "Colorado"},
@@ -71,38 +71,38 @@ state_ids = [
     {"id": 54, "name": "West Virginia"}, {"id": 55, "name": "Wisconsin"}, {"id": 56, "name": "Wyoming"}
 ]
 
-# Make the fake election dataframe
+#makae the fake election dataframe
 election_data = pd.DataFrame(state_ids)
 
-# Make alternating parties for Republican and Democrat if state ID is even or odd
+#make alternating parties for republican and democrat if state id is even or odd
 election_data["party"] = ["Republican" if i % 2 == 0 else "Democrat" for i in range(len(election_data))]
 
-# Generate random margins from 1 to 99 for each Republican state and -1 to -99 for each Democrat state
+
+#generate random margins from 1 to 99 for each republican state and -1 to -99 for each democrat state 
 election_data["margin"] = [random.randint(1, 99) if i % 2 == 0 else -random.randint(1, 99) for i in range(len(election_data))]
 
-# Assign the margin to a new column using the party as the prefix
+#assign the margin to a new column using the party as the prefix
 election_data["party_margin"] = election_data.apply(
     lambda row: f"{'D+' if row['party'] == 'Democrat' else 'R+'}{abs(row['margin'])}", axis=1
 )
 
-# Create the chart
+#create the chart
 chart = alt.Chart(states).mark_geoshape(
     stroke='white',
     strokeWidth=0.5
 ).encode( 
      color=alt.Color(
-        'party:N',  # Make color the party
+        'party:N',  #make color the party
         scale=alt.Scale(
             domain=['Democrat', 'Republican'],  
-            range=['#0057B8', '#D62728']  # Blue for Democrat, Red for Republican
+            range=['#0057B8', '#D62728']  #blue dem red republican
         ),
-        legend=alt.Legend(title='Party')  # Make a legend because I couldn’t do the other one with a gradient
+        legend=alt.Legend(title='Party')  #make a legend cause i couldnt do the other one witha gradient
     
-    ), 
-    # Make states' opacities depend on the magnitude of the margin
+    ), #make states opacities depend on the magnitude of the margin
     opacity=alt.Opacity('margin:Q',
-        scale=alt.Scale(domain=[-99, 0, 99], range=[1, 0.2, 1]), # Make it 0.2 lowest because 0 is way too white
-        legend=None  # I couldn’t figure out how to make this work with Altair for a "gradient" form 
+        scale=alt.Scale(domain=[-99, 0, 99], range=[1, 0.2, 1]), #make it 0.2 lowest cause 0 is way too white
+        legend=None #i couldnt figure out how to make this work with altair for a "gradient" form 
     ),
     tooltip=['name:N', 'party:N', 'party_margin:N']
 ).transform_lookup(
@@ -117,3 +117,5 @@ chart = alt.Chart(states).mark_geoshape(
 )
 
 chart
+
+```
