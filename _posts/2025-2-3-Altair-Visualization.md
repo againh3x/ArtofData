@@ -139,3 +139,41 @@ chart = alt.Chart(states).mark_geoshape(
 chart
 
 ```
+
+## LA wildfires Map
+
+I tried to recreate this one with just putting random longitudes and latitudes corresponding to real LA areas, but I couldn't find a way to do the topology part. I just made this dataframe where some data points are active and recent into altair where I defined three channels as longitude, latitude, and color (represented by the active/recent status). The final map looks nothing like the NYT graph, so this is definitely a fail. 
+
+
+## Code for LA Wildfires 
+
+```python
+
+
+import altair as alt
+import pandas as pd
+
+#fake wildire data corresponding to approximately LA area (longitudes and latitudes)
+fire_data = pd.DataFrame({
+    'latitude': [34.05, 34.15, 34.20, 33.90, 34.00, 34.25, 33.80],
+    'longitude': [-118.25, -118.35, -118.20, -118.10, -118.30, -118.40, -118.15],
+    'status': ['Active', 'Recent', 'Active', 'Recent', 'Active', 'Recent', 'Active']
+})
+
+#define the color scale corresponding to status
+color_scale = alt.Scale(domain=['Active', 'Recent'], range=['red', 'orange'])
+
+#make the map with the channels
+wildfire_map = alt.Chart(fire_data).mark_circle(size=200).encode(
+    latitude='latitude:Q',
+    longitude='longitude:Q',
+    color=alt.Color('status:N', scale=color_scale, legend=alt.Legend(title="Fire Status")),
+    tooltip=['latitude', 'longitude', 'status']
+).properties(
+    title="Fake LA Wildfires Map",
+    width=600,
+    height=400
+)
+
+wildfire_map
+```
