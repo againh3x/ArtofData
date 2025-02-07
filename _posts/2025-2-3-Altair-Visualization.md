@@ -144,6 +144,23 @@ chart
 
 I tried to recreate this one with just putting random longitudes and latitudes corresponding to real LA areas, but I couldn't find a way to do the topology part. I just made this dataframe where some data points are active and recent into altair where I defined three channels as longitude, latitude, and color (represented by the active/recent status). The final map looks nothing like the NYT graph, so this is definitely a fail. 
 
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <!-- Import vega-embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+
+
+<div id="vis"></div>
+
+<script type="text/javascript">
+  var spec = "https://raw.githubusercontent.com/againh3x/ArtofData/refs/heads/master/wildfire_map.json";
+  vegaEmbed('#vis', spec).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
 
 ## Code for LA Wildfires 
 
