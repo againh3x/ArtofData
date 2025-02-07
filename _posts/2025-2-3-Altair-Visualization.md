@@ -153,11 +153,11 @@ I tried to recreate this one with just putting random longitudes and latitudes c
 </head>
 
 
-<div id="vis"></div>
+<div id="vid"></div>
 
 <script type="text/javascript">
   var spec = "https://raw.githubusercontent.com/againh3x/ArtofData/refs/heads/master/wildfire_map.json";
-  vegaEmbed('#vis', spec).then(function(result) {
+  vegaEmbed('#vid', spec).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
