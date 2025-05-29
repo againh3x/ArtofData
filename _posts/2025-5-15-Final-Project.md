@@ -11,7 +11,7 @@
 </div>
 
 # Research Visual Flow Chart
-![Points vs. Assists Regression Plot](['flowchart.png'])
+![Flowchart]([flowchart.png])
 
 # Confusion Matrix (Model's predictions vs. Real labels) and Feature Importance for the ML (tabular data) XGBoost model
 
