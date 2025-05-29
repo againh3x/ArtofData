@@ -11,16 +11,14 @@
 </div>
 
 # Research Visual Flow Chart
-![Flowchart](flowchart.png)
+![Flowchart]({{ '/assets/img/flowchart.png' | relative_url }})
 
 # Confusion Matrix (Model's predictions vs. Real labels) and Feature Importance for the ML (tabular data) XGBoost model
 
-![Confusion Matrix](confmatrix.png)
-![Feature Importance](feature_importance.png)
-
+![Confusion Matrix]({{ '/assets/img/confmatrix.png' | relative_url }})
+![Feature Importance]({{ '/assets/img/feature_importance.png' | relative_url }})
 The first image shows each of the model's predictions and the corresponding truth values. Notice that the model correctly predicted a large majority of patients that were actually over 8 hours, but also predicted the large majority of patients under 8 hours to be over 8 hours. 
 
-The second image shows the important features the model took into account, with the mode of transportation being the highest (not an ECG related feature). 
 
 
 
