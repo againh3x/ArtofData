@@ -11,3 +11,9 @@
 </div>
 
 # Research Visual Flow Chart
+
+
+# Confusion Matrix (Model's predictions vs. Real labels) and Feature Importance for the ML (tabular data) XGBoost model
+
+
+The first image shows each of the model's predictions and the corresponding truth values. Notice that the model correctly predicted a large majority of patients that were actually over 8 hours, but also predicted the large majority of patients under 8 hours to be over 8 hours. 
