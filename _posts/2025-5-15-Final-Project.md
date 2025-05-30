@@ -4,7 +4,7 @@
   <img src="{{ '/assets/img/podcast_background.png' | relative_url }}" alt="Background" style="width: 100%; max-width: 800px; border-radius: 10px;">
   <div style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
     <audio controls>
-      <source src="{{ '/assets/img/audio_podcast.mp3' | relative_url }}" type="audio/mpeg">
+      <source src="{{ '/assets/img/audio_podcastt.mp3' | relative_url }}" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
   </div>
